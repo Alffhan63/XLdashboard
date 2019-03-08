@@ -60,13 +60,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </span>
               </a>
               <ul class="treeview-menu">
-              <li><a href="#"><i class="fa  fa-upload"></i>Automatic Target File</a></li>
-              <li><a href="#"><i class="fa   fa-users"></i> Campaign Recepient</a></li>
-              <li><a href="#"><i class="fa  fa-user-times"></i> Recepient (Skipped)</a></li>
+              <li><a href="<?php echo site_url('automatictarget'); ?>"><i class="fa  fa-upload"></i>Automatic Target File</a></li>
+              <li><a href="<?php echo site_url('campaignrecepient'); ?>"><i class="fa   fa-users"></i> Campaign Recepient</a></li>
+              <li><a href="<?php echo site_url('recepientskip'); ?>"><i class="fa  fa-user-times"></i> Recepient (Skipped)</a></li>
               </ul>
             </li>
-            <li><a href="#"><i class="fa  fa-check-square"></i> Campaign Approval</a></li>
-            <li><a href="#"><i class="fa  fa-ban"></i> Blacklist</a></li>
+            <li><a href="<?php echo site_url('campaignapproval'); ?>"><i class="fa  fa-check-square"></i> Campaign Approval</a></li>
+            <li><a href="<?php echo site_url('blacklist'); ?>"><i class="fa  fa-ban"></i> Blacklist</a></li>
             <li><a href="#"><i class="fa  fa-share"></i> Test Campaign</a></li>
           </ul>
           <li class="treeview">
@@ -84,9 +84,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-bullhorn"></i>Summary per Campaign</a></li>
+              <li><a href="<?php echo site_url('report'); ?>"><i class="fa fa-bullhorn"></i>Summary per Campaign</a></li>
               <li><a href="#"><i class="fa fa-mail-reply" ></i>Broadcast Response</a></li>
-              <li><a href="#"><i class="fa fa-battery-three-quarters" ></i>Push Capacity</a></li>
+              <li><a href="<?php echo site_url('pushcapacity'); ?>"><i class="fa fa-battery-three-quarters" ></i>Push Capacity</a></li>
               <li><a href="#"><i class="fa   fa-th-list" ></i>Server Up Time</a></li>
               <li><a href="<?php echo site_url('campaignlist') ?>"><i class="fa fa-list-ol"></i>Campaign List</a></li>
             </ul>

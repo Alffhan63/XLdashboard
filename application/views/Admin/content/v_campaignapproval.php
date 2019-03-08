@@ -2,101 +2,153 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<div class="content-wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Automatic Target File
-          <small></small>
+          Campaign Approval
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
           <li><a href="#">Campaign Management</a></li>
-          <li><a href="#">Recepient</a></li>
-          <li class="active">Automatic Target File</li>
+          <li class="active">Campaign Approval</li>
         </ol>
       </section>
 
       <!-- Main content -->
       <section class="content">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box">
-              <div class="box-header with-border" style="background: #337ab7; border-radius: 5px;">
-                <h3 class="box-title" style="color:white; padding: 3px;">Automatic Target File</h3>
-                <div class="box-tools" style="float:right;">
-                  <button type="button" class="btn" style="padding-right:10px;">
-                    <span>
-                      <i class="fa fa-calendar"></i> Date range picker
-                    </span>
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                    <th>Campaign Name</th>
-                      <th>File Name (Proceed)</th>
-                      <th>File Name (Uploaded)</th>
-                      <th>Number of Row</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                    <td>xtravaganza  [2019-02-17:09:00]</td>
-                      <td>/home/greenplum_wibpush/process/xtravaganza_20190217</td>
-                      <td></td>
-                      <td>6</td>
-                    </tr>
-                    <tr>
-                    <td>xtravaganza  [2019-02-17:09:00]</td>
-                      <td>/home/greenplum_wibpush/process/xtravaganza_20190217</td>
-                      <td></td>
-                      <td>6</td>
-                    </tr>
-                    <tr>
-                    <td>xtravaganza  [2019-02-17:09:00]</td>
-                      <td>/home/greenplum_wibpush/process/xtravaganza_20190217</td>
-                      <td></td>
-                      <td>6</td>
-                      </tr>
-                    <tr>
-                    <td>xtravaganza  [2019-02-17:09:00]</td>
-                      <td>/home/greenplum_wibpush/process/xtravaganza_20190217</td>
-                      <td></td>
-                      <td>6</td>
-                      </tr>
-                    </tfoot>
-                </table>
-              </div>
-              <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
+        <div class="box">
+          <div class="box-header with-border" style="background: #337ab7; border-radius: 5px;">
+            <h3 class="box-title" style="color:white; padding: 3px;">Latest Campaign For Approval</h3>
           </div>
-          <!-- /.col -->
-				</div>
-				<div class="modal fade" id="modal-default">
+          
+          <!-- /.box-header -->
+          <div class="box-body">
+            <table id="example2" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                <th></th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Recepient</th>
+                  <th>Schedule</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td>
+                <label>
+                  <input type="checkbox" class="flat-red">
+                </label>
+                </td>
+                  <td>Alfhan</td>
+                  <td>Manual</td>
+                  <td>50.000</td>
+                  <td>15.30</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" type="submit">Approve</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Decline</button>
+                    <button class="btn btn-info " type="button" data-toggle="modal" data-target="#modal-default">
+                          <i class="fa fa-search"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                <label>
+                  <input type="checkbox" class="flat-red">
+                </label>
+                </td>
+                  <td>Xtravaganza</td>
+                  <td>Manual</td>
+                  <td>50.000</td>
+                  <td>15.30</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" type="submit">Approve</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Decline</button>
+                    <button class="btn btn-info " type="submit"><i class="fa fa-search"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                <label>
+                  <input type="checkbox" class="flat-red">
+                </label>
+                </td>
+                
+                  <td>Fantaxis</td>
+                  <td>Manual</td>
+                  <td>50.000</td>
+                  <td>15.30</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" type="submit">Approve</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Decline</button>
+                    <button class="btn btn-info " type="submit"><i class="fa fa-search"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                <label>
+                  <input type="checkbox" class="flat-red">
+                </label>
+                </td>
+                  <td>Spextrakuler</td>
+                  <td>Manual</td>
+                  <td>50.000</td>
+                  <td>15.30</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" type="submit">Approve</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Decline</button>
+                    <button class="btn btn-info " type="submit"><i class="fa fa-search"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                <td>
+                <label>
+                  <input type="checkbox" class="flat-red">
+                </label>
+                </td>
+                  <td>Triviaxis</td>
+                  <td>Manual</td>
+                  <td>50.000</td>
+                  <td>15.30</td>
+                  <td>
+                    <button class="btn btn-success btn-sm" type="submit">Approve</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Decline</button>
+                    <button class="btn btn-info " type="submit"><i class="fa fa-search"></i></button>
+                  </td>
+                </tr>
+                </tfoot>
+            </table>
+          </div>
+          <!-- /.box-body -->
+              <!-- /.col -->
+              <div class="modal fade" id="modal-default">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" style="">Preview Campaign</h4>
+                <h4 class="modal-title">Preview Campaign</h4>
               </div>
               <div class="modal-body">
                 <div class="row">
                   <div class="col-md-7">
                     <div class="box">
                       <div class="box-header" style="background: #337ab7; border-radius: 5px;">
-                        <h3 class="box-title" style="color:white; text-align:center;">Detail Campaign</h3>
+                        <h3 class="box-title" style="color:white; padding: 3px;">Detail Campaign</h3>
                       </div>
                       <!-- /.box-header -->
                       <!-- form start -->
                       <form class="form-horizontal" style="padding-top:10px;">
                         <div class="box-body">
+                          <div class="form-group" name="">
+                            <label for="" class="col-sm-2 control-label" style="width:30%">Name</label>
+                            <div class="col-sm-6">
+                              <p>WIBPUSH-Spextrakuler</p>
+                            </div>
+                          </div>
                           <div class="form-group" name="">
                             <label for="" class="col-sm-2 control-label" style="width:30%;">Tone</label>
                             <div class="col-sm-6">
@@ -142,7 +194,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                               <p>*123#</p>
                             </div>
                           </div>
-                    </div>
+                          <div class="form-group" name="">
+                            <label for="" class="col-sm-2 control-label" style="width:30%">Total Recepient</label>
+                            <div class="col-sm-3">
+                             <p>50,000</p>
+                            </div>
+                          </div>
+                          <div class="form-group" name="">
+                            <label for="" class="col-sm-2 control-label" style="width:30%">Start Date</label>
+                            <p>20/02/2019</p>
+                          </div>
+                          <div class="form-group" name="">
+                            <label for="" class="col-sm-2 control-label" style="width:30%;">Start Time</label>
+                            <div class="col-sm-3">
+                              <p>19.30</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group" name="">
+                          <label for="" class="col-sm-2 control-label" style="width:30%">File Name</label>
+                          <div class="col-sm-8">
+                            <span id='val' style="padding-left:10px;">192001021_Xtravaganza</span>
+                          </div>
+                        </div>
                     </div>
                     <!-- /.box-footer -->
                     </form>
@@ -236,8 +310,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <!-- /.modal-dialog -->
         </div>
-        <!-- /.modal -->
-        <!-- /.row -->
+
+            </div>
+            <!-- /.row -->
       </section>
       <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
+<script>
+
+    $('input[type="checkbox"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green'
+
+    });
+
+    $("#select-all").click(function () {
+     $('input:checkbox').not(this).prop('checked', this.checked);
+    });
+
+    
+
+  </script>

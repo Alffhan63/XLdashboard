@@ -63,6 +63,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </select>
               </div>
             </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Departemen </label>
+              <div class="col-sm-8" style="padding-right:30%">
+                <select class="form-control" id="role">
+                  <option>Vendor Mediatek</option>
+                  <option>CVM</option>
+                  <option>PTHS</option>
+                  <option>HDC</option>
+                </select>
+              </div>
+            </div>
           </div>
           <!-- /.box-body -->
           <div class="box-footer">

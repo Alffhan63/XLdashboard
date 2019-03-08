@@ -45,9 +45,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                   </div>
                   <div class="form-group textone" name="">
-                    <label for="" class="col-sm-2 control-label" style="width:30%">Text Tone</label>
+                    <label for="" class="col-sm-2 control-label" style="width:30%">Tone Title</label>
                     <div class="col-sm-3">
-                      <input id="captiontone" maxlength="30" type="" class="form-control input-sm" placeholder=""
+                      <input id="captiontone" maxlength="18" type="" class="form-control input-sm" placeholder=""
+                        name="">
+                    </div>
+                  </div>
+                  <div class="form-group toneduration" name="">
+                    <label for="" class="col-sm-2 control-label" style="width:30%">Tone Duration(s) </label>
+                    <div class="col-sm-2">
+                      <input id="toneduration" maxlength="2" type="" class="form-control input-sm" placeholder=""
                         name="">
                     </div>
                   </div>
@@ -58,7 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <option value="1" selected="selected">1 Layer</option>
                         <option>2 Layer</option>
                         <option>3 Layer</option>
-
                       </select>
                     </div>
                   </div>
@@ -204,25 +210,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
-                    <!-- <div id="toneCarousel" class="item">
-                      <img src="bower_components/login/images/TemplateTonecampaign.png" alt="Chicago"
-                        style="width:100%; height: 80%;">
-                      <div class="container">
-                        <div class="carousel-caption"
-                          style="padding-bottom:55%; padding-left:15%; padding-right:15%; text-align:center; position: absolute;">
-                          <span id="previewtone" style="color:white; font-size:16px; white-space: pre-wrap;
-                                   word-break: break-word;">
-                          </span>
-                        </div>
-                      </div>
-                    </div> -->
-                    <div class="item layerpreview1 active">
+                    <div id="layerutama" class="item layerpreview1 active">
                       <img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;">
                       <div class="container">
-                        <div class="carousel-caption"
-                          style="padding-bottom:60%; padding-left:35px; padding-right:50px; text-align:left;">
-                          <span id="previewlayer1" style="color:black; font-size:90%; white-space: pre-wrap;
-                               word-break: break-word;">
+                        <div class="carousel-caption">
+                          <span id="previewlayer1" style="color:black; font-size:14px; white-space: pre-wrap;
+                                   word-break: break-word; vertical-align: bottom;">
                           </span>
                         </div>
                       </div>
@@ -422,21 +415,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       });
 
-			$('.textone').hide();
+      $('.textone').hide();
+      $('.toneduration').hide();
       $('#textone').change(function () {
         if ($('#textone').val() == 'Yes') {
           $('.textone').show();
+          $('.toneduration').show();
           $("#layer").val(1);
           $('#myCarousel').carousel(0);
           $(".active").attr("class", "item layerpreview1");
-          $('<div id="toneCarousel" class="item active"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateTonecampaign.png" alt="Chicago"style="width:100%; height: 80%;"> <div class="container"> <div class="carousel-caption" style="padding-bottom:55%; padding-left:15%; padding-right:15%; text-align:center; position: absolute;"> <span id="previewtone" style="color:white; font-size:16px; white-space: pre-wrap; word-break: break-word;"> </span></div> </div> </div>').prependTo('.layerpreview1');
+          $(`<div id="toneCarousel" class="item active">
+							<img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateTonecampaign.png" alt="Chicago"style="width:100%;"> 
+							<div class="container"> 
+								<div class="carousel-caption" style="padding-left:50px; padding-right: 50px; top: 58%; text-align: center"> 
+									<span id="previewtone" style="color:white; font-size:15px; white-space: pre-wrap;word-break: break-word;"></span>
+								</div> 
+							</div> 
+						</div>`).insertBefore('#layerutama');
           $('.layerpreview2').remove();
           $('.layerpreview3').remove();
           $('.layer-2').hide();
           $('.layer-3').hide();
 				} else {
-					$('.textone').hide();
+          $('.textone').hide();
+          $('.toneduration').hide();
           $("#layer").val(1);
+          $('#myCarousel').carousel(0);
           setTimeout(function () {
             $(".active").attr("class", "item layerpreview1 active");
             $('#toneCarousel').remove();
@@ -453,6 +457,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         switch (result) {
           case "2 Layer":
           $('#myCarousel').carousel(0);
+					$('#layer2').val('');
+						$('#layer3').val('');
           setTimeout(function () {
             $('.layerpreview2').remove();
             $('.layerpreview3').remove();
@@ -461,7 +467,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         	break;
           case "3 Layer":
           $('#myCarousel').carousel(0);
-          setTimeout(function () {
+					$('#layer2').val('');
+          setTimeout(function () {	
             $('.layerpreview2').remove();
             $('<div class="item layerpreview2"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;"><div class="container"><div class="carousel-caption"style="padding-bottom:65%; padding-left:35px; padding-right:50px; text-align:left;"><span id="previewlayer2" style="color:black; font-size:15x; white-space: pre-wrap;word-break: break-word;"></span></div></div></div>').appendTo('.carousel-inner');
             $('<div class="item layerpreview3"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;"><div class="container"><div class="carousel-caption"style="padding-bottom:65%; padding-left:35px; padding-right:50px; text-align:left;"><span id="previewlayer3" style="color:black; font-size:15x; white-space: pre-wrap;word-break: break-word;"></span></div></div></div>').appendTo('.carousel-inner');

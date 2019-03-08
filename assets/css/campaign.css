@@ -14,7 +14,7 @@
     text-align:left;
 }
 
-.table th {text-align: center;}
+.th.dt-center, td.dt-center { text-align: center; }
 /* 
 .form-select {
     @include user-select(none);

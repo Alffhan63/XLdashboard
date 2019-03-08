@@ -54,10 +54,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td>Administrator</td>
                       <td>Active</td>
                       <td>
-					  
+                      <a href="<?php echo site_url('edituser') ?>"
 											<button class="btn btn-warning " type="submit">
-																	<i class="fa fa-edit" style="padding-right:10px;">
+											<i class="fa fa-edit" style="padding-right:10px;">
 											</i>Edit</button>
+                      </a>
 						
                       </td>
                     </tr>

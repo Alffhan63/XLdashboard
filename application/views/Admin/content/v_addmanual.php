@@ -230,7 +230,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                       </div>
                     </div> -->
-                    <div class="item layerpreview1 active">
+                    <div id="layerutama" class="item layerpreview1 active">
                       <img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;">
                       <div class="container">
                         <div class="carousel-caption">
@@ -444,8 +444,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           $("#layer").val(1);
           $('#myCarousel').carousel(0);
           $(".active").attr("class", "item layerpreview1");
-          $('<div id="toneCarousel" class="item active"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateTonecampaign.png" alt="Chicago"style="width:100%; height: 80%;"> <div class="container"> <div class="carousel-caption" style="padding-left:50px; padding-right: 50px; top: 58%; text-align: center"> <span id="previewtone" style="color:white; font-size:15px; white-space: pre-wrap;word-break: break-word;"> </span></div> </div> </div>').appendTo('.carousel-inner');
-          $('.layerpreview2').remove();
+          $(`<div id="toneCarousel" class="item active">
+							<img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateTonecampaign.png" alt="Chicago"style="width:100%;"> 
+							<div class="container"> 
+								<div class="carousel-caption" style="padding-left:50px; padding-right: 50px; top: 58%; text-align: center"> 
+									<span id="previewtone" style="color:white; font-size:15px; white-space: pre-wrap;word-break: break-word;"></span>
+								</div> 
+							</div> 
+						</div>`).insertBefore('#layerutama');
+					$('.layerpreview2').remove();
           $('.layerpreview3').remove();
           $('.layer-2').hide();
           $('.layer-3').hide();
@@ -465,11 +472,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
       })
 
-      $('#layer').change(function () {
+			$('#layer').change(function () {
         var result = $('#layer').val();
         switch (result) {
           case "2 Layer":
           $('#myCarousel').carousel(0);
+					$('#layer2').val('');
+						$('#layer3').val('');
           setTimeout(function () {
             $('.layerpreview2').remove();
             $('.layerpreview3').remove();
@@ -478,7 +487,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         	break;
           case "3 Layer":
           $('#myCarousel').carousel(0);
-          setTimeout(function () {
+					$('#layer2').val('');
+          setTimeout(function () {	
             $('.layerpreview2').remove();
             $('<div class="item layerpreview2"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;"><div class="container"><div class="carousel-caption"style="padding-bottom:65%; padding-left:35px; padding-right:50px; text-align:left;"><span id="previewlayer2" style="color:black; font-size:15x; white-space: pre-wrap;word-break: break-word;"></span></div></div></div>').appendTo('.carousel-inner');
             $('<div class="item layerpreview3"><img src="<?php echo base_url() ?>assets/bower_components/login/images/TemplateCampaign.png" alt=" " style="width:100%;"><div class="container"><div class="carousel-caption"style="padding-bottom:65%; padding-left:35px; padding-right:50px; text-align:left;"><span id="previewlayer3" style="color:black; font-size:15x; white-space: pre-wrap;word-break: break-word;"></span></div></div></div>').appendTo('.carousel-inner');
