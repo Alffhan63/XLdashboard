@@ -183,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- /.box-header -->
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Daily Push Capacity</h3>
+        <h3 class="box-title">Based On Top Region/h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -200,20 +200,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <!-- /.box-header -->
-    <div class="box box-primary">
-      <div class="box-header with-border">
-        <h3 class="box-title">Server Uptime</h3>
-
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
-      </div>
+    <div class="box">
+    <div class="box">
+          <div class="box-header with-border" style="background: #FFA500; border-radius: 5px;">
+            <h3 class="box-title" style="color:white; padding: 3px;">Based on Top 10 Region</h3>
+            <!-- <button type="button" class="btn btn-success" style="margin-left:10px; margin-right: 5px; float:right;"><i class="fa fa-download"></i>
+                    Download
+            </button> -->
+          </div>
       <div class="box-body">
         <div class="chart">
-          <canvas id="myChart" style="height:250px"></canvas>
-          <canvas id="myChartPie" style="height:250px"></canvas>
+          <!-- <canvas id="myChart" style="height:250px"></canvas> -->
+          <canvas id="myChartPie" style="height:350px"></canvas>
         </div>
       </div>
       <!-- /.box-body -->
@@ -277,48 +275,50 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var cto = document.getElementById("myChart").getContext('2d');
-var chart = new Chart(cto, {
-    type: 'horizontalBar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderWidth: 1
-        }
-      ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
+// var cto = document.getElementById("myChart").getContext('2d');
+// var chart = new Chart(cto, {
+//     type: 'horizontalBar',
+//     data: {
+//         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(75, 192, 192, 0.2)',
+//             ],
+//             borderColor: [
+//                 'rgba(75, 192, 192, 0.2)',
+//             ],
+//             borderWidth: 1
+//         }
+//       ]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero:true
+//                 }
+//             }]
+//         }
+//     }
+// });
 
 var cta = document.getElementById("myChartPie").getContext('2d');
 var charts = new Chart(cta, {
     type: 'pie',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Jakarta","Bandung", "Bekasi"],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+             ill: true,
             backgroundColor: [
-                'rgba(75, 192, 192, 0.2)',
-            ],
+                '#eb2d3a',
+                '#add8e6',
+                '#90ee90'],
+            label: '# of Votes',
+            data: [100, 110, 15],
             borderColor: [
-                'rgba(75, 192, 192, 0.2)',
+              '#fff'
             ],
             borderWidth: 1
         }

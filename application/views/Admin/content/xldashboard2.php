@@ -145,71 +145,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- /.row -->
         <div class="box">
-          <div class="box-header with-border" style="background: #337ab7; border-radius: 5px;">
-            <h3 class="box-title" style="color:white; padding: 3px;">Latest Campaign</h3>
+          <div class="box-header with-border" style="background: #FFA500; border-radius: 5px;">
+            <h3 class="box-title" style="color:white; padding: 3px;">Summary Result City</h3>
+            <!-- <button type="button" class="btn btn-success" style="margin-left:10px; margin-right: 5px; float:right;"><i class="fa fa-download"></i>
+                    Download
+            </button> -->
           </div>
           <!-- /.box-header -->
           <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Recepient</th>
-                  <th>Schedule</th>
-                  <th>Status</th>
+                  <th>City</th>
+                  <th>Total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-info">Wait Approval</span></td>
+                  <td>Bekasi</td>
+                  <td>200</td>
                 </tr>
                 <tr>
-                
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-danger">In Queue</span></td>
+                  <td>Jakarta</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-info">Wait Approval</span></td>
+                  <td>Bekasi</td>
+                  <td>11</td>
                 </tr>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-info">Wait Approval</span></td>
+                  <td>Jakarta</td>
+                  <td>140</td>
                 </tr>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-danger">In Queue</span></td>
+                  <td>Bandung</td>
+                  <td>140</td>
                 </tr>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-success">Completed</span></td>
+                <td>Bandung</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td>Xtravaganza</td>
-                  <td>Automatic</td>
-                  <td>50.000</td>
-                  <td>09.00</td>
-                  <td><span class="label label-info">Wait Approval</span></td>
+                  <td>North Sumatra</td>
+                  <td>110</td>
+                </tr>
+                <tr>
+                <td>Jakarta</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                <td>Jakarta</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                <td>Jakarta</td>
+                  <td>10</td>
                 </tr>
                 </tfoot>
             </table>
